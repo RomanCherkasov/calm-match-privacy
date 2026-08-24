@@ -10,10 +10,23 @@
     article { background: #fff; border-radius: 20px; padding: clamp(22px, 5vw, 42px); box-shadow: 0 8px 30px #26323812; }
     h1, h2 { line-height: 1.2; } h1 { margin-top: 0; } h2 { margin-top: 2em; }
     a { color: #607d72; } .muted { color: #71797b; } hr { border: 0; border-top: 1px solid #e4e1da; margin: 42px 0; }
+    .layout { display: flex; gap: clamp(20px, 4vw, 36px); align-items: flex-start; }
+    .app-image { flex: 0 0 clamp(180px, 28vw, 250px); margin: 0; position: sticky; top: 24px; }
+    .app-image img { width: 100%; height: auto; display: block; border-radius: 16px; border: 1px solid #e4e1da; box-shadow: 0 10px 28px #26323814; }
+    .content { flex: 1 1 auto; min-width: 0; }
+    @media (max-width: 700px) {
+      .layout { flex-direction: column; }
+      .app-image { flex-basis: auto; width: min(100%, 320px); position: static; }
+    }
   </style>
 </head>
 <body>
 <article>
+  <div class="layout">
+    <figure class="app-image">
+      <img src="loud-match.jpg" alt="Громкий матч — экран приложения">
+    </figure>
+    <div class="content">
   <h1>Политика конфиденциальности «Громкого матча»</h1>
   <p class="muted">Дата вступления в силу: 12 августа 2026 года</p>
   <p>Разработчик приложения — Роман Черкасов. По вопросам конфиденциальности: <a href="mailto:palkamon@yandex.ru">palkamon@yandex.ru</a>.</p>
@@ -39,6 +52,8 @@
   <p>The app is intended for users aged 13 and older and is not specifically directed to children under 13.</p>
   <h2>Deletion and updates</h2>
   <p>Local data can be removed through the progress reset control or by uninstalling the app. This policy may be updated with the app; the latest version remains available at this address.</p>
+    </div>
+  </div>
 </article>
 </body>
 </html>
